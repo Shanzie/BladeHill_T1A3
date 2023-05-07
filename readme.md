@@ -1,8 +1,6 @@
 #### Provide a link to your source control repository
 https://github.com/Shanzie/BladeHill_T1A3
 
-# Watchlist Help Documentation
-
 ## Introduction
 
 The watchlist application is designed to help you keep track of movies and series you want to watch. It allows you to add movies and series to a watchlist, view and manage your list, and pick a random movie or series to watch.
@@ -87,7 +85,7 @@ Using the watchlist is quite simple after running the last command in the instal
 - **Priority:** medium
 - **Deadline:** 3 days
 
-#### Checklist for each feature:
+## Checklist for each feature:
 
 Add movie to Watchlist:
 - Add option to user menu ✓

@@ -136,6 +136,29 @@ Pick a Random Movie:
 
 #### Test 1 - Adding a movie and series to the list
 
-First I tried to add the movie 
+First I tried to add the movie Assassin Club, below is the result:
 
-![](/docs/image.png)
+![Adding a movie](/docs/addmovie.png)
+
+The movie was successfully recorded and added into the watch_list.json
+
+Next I tried to add the series Jujutsu Kaisen, below is the result:
+
+![Adding a series](/docs/addseries.PNG)
+
+This was also successfully recorded and added into the watch_list.json
+
+#### Test 2 - Sorting movies and series by genre
+
+This test was to check the sorting by genre section of the program, first I tried to sort by action movies currently listed on the watchlist, below is the result:
+
+![Action Movies](/docs/action.PNG)
+
+This listed all the action movies on the list including the newly added one in Test 1.
+
+Next I tested another genre anime below is the result:
+
+![Anime Movies](/docs/anime.PNG)
+
+This like the last test listed all the anime movies including the newly added one in Test 1.
+

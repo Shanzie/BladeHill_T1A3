@@ -137,3 +137,5 @@ Pick a Random Movie:
 #### Test 1 - Adding a movie and series to the list
 
 First I tried to add the movie 
+
+![](/docs/image.png)

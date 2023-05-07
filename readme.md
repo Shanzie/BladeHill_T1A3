@@ -138,7 +138,7 @@ Pick a Random Movie:
 
 First I tried to add the movie Assassin Club, below is the result:
 
-![Adding a movie](/docs/addmovie.png)
+![Adding a movie](/docs/addmovie.PNG)
 
 The movie was successfully recorded and added into the watch_list.json
 
@@ -162,3 +162,4 @@ Next I tested another genre anime below is the result:
 
 This like the last test listed all the anime movies including the newly added one in Test 1.
 
+With these few tests it can be assumed that the genre and adding movies and series function is working correctly.

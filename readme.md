@@ -1,3 +1,6 @@
+#### Provide a link to your source control repository
+https://github.com/Shanzie/BladeHill_T1A3
+
 #### Feature: Add movie to Watchlist
 - Add option to user menu to add a movie to the Watchlist
 - When the user selects add movie, prompt the user to enter the movie name, genre, and release date
@@ -68,6 +71,7 @@ Display Watchlist:
 - Read Watchlist file ✓
 - Display movie titles, genres, and release dates ✓
 - Format table output ✓
+- Show Episode Number and Series x
 
 Search Watchlist:
 - Add option to user menu ✓

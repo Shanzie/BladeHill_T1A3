@@ -118,7 +118,7 @@ def main():
         print("5. Sort by genre")
         print("6. Sort by release date")
         print("7. Mark movie as watched")
-        print("8. Select a random movie from your watchlist")
+        print("8. Select a random movie from your watchlist (under construction)")
         print("9. Quit")
 
         choice = input("Enter your choice: ")
@@ -149,7 +149,7 @@ def main():
         elif choice == "9":
             with open("watch_list.json", "w") as f:
                 json.dump(watch_list, f)
-            print("Thanks for using your Watch List. Goodbye!")
+            print("Thanks for using Blade's Watchlist Tool. Goodbye!")
             break
         else:
             print("Invalid choice. Try again.")

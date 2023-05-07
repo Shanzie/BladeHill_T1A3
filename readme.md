@@ -131,3 +131,9 @@ Pick a Random Movie:
 - Add option to user menu ✓
 - Pick a random movie from Watchlist ✓
 - Display the randomly selected movie ✓
+
+## Testing the Program
+
+#### Test 1 - Adding a movie and series to the list
+
+First I tried to add the movie 

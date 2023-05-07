@@ -3,9 +3,9 @@ import json
 import random
 
 def add_movie(watch_list):
-    movie = input("Enter the movie name: ")
-    genre = input("Enter the genre of the movie: ")
-    release_date = input("Enter the release date of the movie: ")
+    movie = input("Enter the movie or series name: ")
+    genre = input("Enter the genre of the movie/series: ")
+    release_date = input("Enter the release date of the movie/series: ")
     series = input("Is this movie part of a series? (Y/N) ").upper()
 
     if series == "Y":
@@ -19,7 +19,7 @@ def add_movie(watch_list):
     print(f"{movie} has been added to your watchlist.")
 
 def edit_movie(watch_list):
-    movie = input("Enter the movie you want to edit: ")
+    movie = input("Enter the movie/series you want to edit: ")
     if movie in watch_list:
         genre = input(f"Enter the new genre for {movie}: ")
         release_date = input(f"Enter the new release date for {movie}: ")
@@ -37,7 +37,7 @@ def edit_movie(watch_list):
         print(f"{movie} not found on watchlist.")
 
 def remove_movie(watch_list):
-    movie = input("Enter the movie you want to remove: ")
+    movie = input("Enter the movie/series you want to remove: ")
     if movie in watch_list:
         watch_list.pop(movie)
         print(f"{movie} has been removed from your watchlist.")
@@ -59,18 +59,18 @@ def sort_by_genre(watch_list):
         if details["genre"].lower() == genre.lower():
             genre_list.append(movie)
     if genre_list:
-        print(f"Here are your movies with genre '{genre}':")
+        print(f"Here are your movies/series with genre '{genre}':")
         for movie in genre_list:
             print(movie)
     else:
-        print(f"No movies found with genre '{genre}' in your watchlist.")
+        print(f"No movies or series found with genre '{genre}' in your watchlist.")
 
 def sort_by_release_date(watch_list):
     release_date_list = []
     for movie, details in watch_list.items():
         release_date_list.append((movie, details["release_date"]))
     release_date_list = sorted(release_date_list, key=lambda x: x[1])
-    print("Here are your movies sorted by release date:")
+    print("Here are your movies and series sorted by release date:")
     for movie in release_date_list:
         print(f"{movie[0]} ({movie[1]})")
 
@@ -111,9 +111,9 @@ def main():
         print("               \  /\  /| (_| || |_| (__ | | | || || |\__ \| |_      | || (_) || (_) || | _           ")
         print("                \/  \/  \__,_| \__|\___||_| |_||_||_||___/ \__|     |_| \___/  \___/ |_|(_)          ")
         print("                                                                                                     ")
-        print("1. Add movie")
-        print("2. Edit movie")
-        print("3. Remove movie")
+        print("1. Add movie/series")
+        print("2. Edit movie/series")
+        print("3. Remove movie/series")
         print("4. Print your watchlist")
         print("5. Sort by genre")
         print("6. Sort by release date")
@@ -136,7 +136,7 @@ def main():
         elif choice == "6":
             sort_by_release_date(watch_list)
         elif choice == "7":
-            watched_movie = input("Enter the movie you've watched: ")
+            watched_movie = input("Enter the movie/series you've watched: ")
             if watched_movie in watch_list:
                 with open("watched_movies.txt", "a") as f:
                     f.write(watched_movie + "\n")

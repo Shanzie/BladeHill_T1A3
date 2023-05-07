@@ -41,6 +41,13 @@
 - **Priority:** Low
 - **Deadline:** 7 days
 
+#### Feature: Pick a Random Movie
+- Add option to user menu to pick a random movie from the Watchlist
+- When the user selects pick movie, choose a random movie from the Watchlist
+- Display the randomly selected movie to the user
+- **Priority:** medium
+- **Deadline:** 3 days
+
 #### Checklist for each feature:
 
 Add movie to Watchlist:
@@ -81,3 +88,8 @@ Import Watchlist:
 - Read CSV file ✓
 - Convert CSV file to Watchlist format ✓
 - Replace current Watchlist ✓
+
+Pick a Random Movie:
+- Add option to user menu ✓
+- Pick a random movie from Watchlist ✓
+- Display the randomly selected movie ✓

@@ -1,5 +1,6 @@
 import csv
 import json
+import random
 
 def add_movie(watch_list):
     movie = input("Enter the movie name: ")
@@ -73,6 +74,25 @@ def sort_by_release_date(watch_list):
     for movie in release_date_list:
         print(f"{movie[0]} ({movie[1]})")
 
+def display_watchlist():
+    with open("watch_list.json", "r") as f:
+        watch_list = json.load(f)
+    print("Your Watchlist:")
+    print("{:<30} {:<20} {:<10}".format("Movie Name", "Genre", "Release Date"))
+    for movie in watch_list:
+        print("{:<30} {:<20} {:<10}".format(movie["name"], movie["genre"], movie["release_date"]))
+
+def pick_random_movie():
+    with open("watch_list.json", "r") as f:
+        watch_list = json.load(f)
+    if not watch_list:
+        print("Your Watchlist is empty.")
+    else:
+        random_movie = random.choice(watch_list)
+        print(f"Randomly selected movie: {random_movie['name']}")
+        print(f"Genre: {random_movie['genre']}")
+        print(f"Release Date: {random_movie['release_date']}")
+
 def main():
     with open("watch_list.json", "r") as f:
         watch_list = json.load(f)
@@ -98,7 +118,8 @@ def main():
         print("5. Sort by genre")
         print("6. Sort by release date")
         print("7. Mark movie as watched")
-        print("8. Quit")
+        print("8. Select a random movie from your watchlist")
+        print("9. Quit")
 
         choice = input("Enter your choice: ")
 
@@ -124,6 +145,8 @@ def main():
             else:
                 print(f"{watched_movie} not found on watchlist.")
         elif choice == "8":
+            pick_random_movie()
+        elif choice == "9":
             with open("watch_list.json", "w") as f:
                 json.dump(watch_list, f)
             print("Thanks for using your Watch List. Goodbye!")
